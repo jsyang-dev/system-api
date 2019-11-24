@@ -17,6 +17,13 @@ spring:
     username: mruser
     password: qwer1234!
 
+app:
+  rabbitmq:
+    exchange: logger.exchange
+    queue: logger.queue
+    routing:
+      pattern: logger.controller.#
+
 ---
 spring:
   profiles: dev
