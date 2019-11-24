@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: local
+
+server:
+  port: 8082
+
+---
+spring:
+  profiles: local
+  devtools:
+    livereload:
+      enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: mruser
+    password: qwer1234!
+
+---
+spring:
+  profiles: dev
+  devtools:
+    livereload:
+      enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: mruser
+    password: qwer1234!
+
+---
+spring:
+  profiles: prod
+  devtools:
+    livereload:
+      enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: mruser
+    password: qwer1234!
