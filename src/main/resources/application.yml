@@ -16,6 +16,9 @@ spring:
     port: 5672
     username: mruser
     password: qwer1234!
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/log
 
 app:
   rabbitmq:
@@ -35,6 +38,9 @@ spring:
     port: 5672
     username: mruser
     password: qwer1234!
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/log
 
 ---
 spring:
@@ -47,3 +53,6 @@ spring:
     port: 5672
     username: mruser
     password: qwer1234!
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/log
