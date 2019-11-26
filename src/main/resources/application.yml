@@ -34,13 +34,15 @@ spring:
     livereload:
       enabled: true
   rabbitmq:
-    host: localhost
+    host: 10.0.10.206
     port: 5672
     username: mruser
     password: qwer1234!
   data:
     mongodb:
-      uri: mongodb://localhost:27017/log
+      uri: mongodb://10.0.10.206:27017/log
+      username: mruser
+      password: qwer1234!
 
 ---
 spring:
@@ -49,10 +51,12 @@ spring:
     livereload:
       enabled: true
   rabbitmq:
-    host: localhost
+    host: 10.0.10.206
     port: 5672
     username: mruser
     password: qwer1234!
   data:
     mongodb:
-      uri: mongodb://localhost:27017/log
+      uri: mongodb://10.0.10.206:27017/log
+      username: mruser
+      password: qwer1234!
