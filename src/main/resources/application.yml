@@ -19,7 +19,7 @@ spring:
     password: qwer1234!
   data:
     mongodb:
-      uri: mongodb://localhost:27017/log
+      uri: mongodb://localhost:27017/myrecipes
 
 app:
   rabbitmq:
