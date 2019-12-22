@@ -42,8 +42,8 @@ spring:
   data:
     mongodb:
       uri: mongodb://10.0.10.206:27017/myrecipes
-      username: mruser
-      password: qwer1234!
+#      username: mruser
+#      password: qwer1234!
 
 app:
   rabbitmq:
@@ -66,8 +66,8 @@ spring:
   data:
     mongodb:
       uri: mongodb://10.0.10.206:27017/myrecipes
-      username: mruser
-      password: qwer1234!
+#      username: mruser
+#      password: qwer1234!
 
 app:
   rabbitmq:
