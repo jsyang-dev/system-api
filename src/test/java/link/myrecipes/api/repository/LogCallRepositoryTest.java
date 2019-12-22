@@ -2,6 +2,7 @@ package link.myrecipes.api.repository;
 
 import link.myrecipes.api.domain.LogCallDocument;
 import link.myrecipes.api.exception.NotExistDataException;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class LogCallRepositoryTest {
     private LogCallRepository logCallRepository;
 
     @Test
+    @Ignore
     public void When_호출로그_저장_Then_동일한_도메인_반환() {
         //given
         LogCallDocument logCallDocument = LogCallDocument.builder()
@@ -33,7 +35,7 @@ public class LogCallRepositoryTest {
 
         //when
         Optional<LogCallDocument> logCallDocumentOptional = this.logCallRepository.findById(savedLogCallDocument.getId());
-        if (logCallDocumentOptional.isEmpty()) {
+        if (!logCallDocumentOptional.isPresent()) {
             throw new NotExistDataException(LogCallDocument.class, savedLogCallDocument.getId());
         }
 
