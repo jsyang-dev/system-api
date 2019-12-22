@@ -36,7 +36,7 @@ public class LogFailRepositoryTest {
 
         //when
         Optional<LogFailDocument> logFailDocumentOptional = this.logFailRepository.findById(savedLogFailDocument.getId());
-        if (!logFailDocumentOptional.isPresent()) {
+        if (logFailDocumentOptional.isEmpty()) {
             throw new NotExistDataException(LogCallDocument.class, savedLogFailDocument.getId());
         }
 

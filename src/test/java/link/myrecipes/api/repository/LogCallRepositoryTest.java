@@ -33,7 +33,7 @@ public class LogCallRepositoryTest {
 
         //when
         Optional<LogCallDocument> logCallDocumentOptional = this.logCallRepository.findById(savedLogCallDocument.getId());
-        if (!logCallDocumentOptional.isPresent()) {
+        if (logCallDocumentOptional.isEmpty()) {
             throw new NotExistDataException(LogCallDocument.class, savedLogCallDocument.getId());
         }
 
