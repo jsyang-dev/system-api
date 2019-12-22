@@ -21,6 +21,7 @@ public class LoggerServiceImpl implements LoggerService {
     @Override
     @RabbitListener(queues = "${app.rabbitmq.queue}")
     public void receiveMessage(LoggerMessage loggerMessage) {
+        log.info(">>>>> receive message: {}", loggerMessage.toString());
         if ("call".equals(loggerMessage.getLogType())) {
             logCallRepository.save(loggerMessage.toLogCallDocument());
         } else if ("fail".equals(loggerMessage.getLogType())) {
