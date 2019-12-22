@@ -20,6 +20,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/myrecipes
+      authentication-database: admin
 
 app:
   rabbitmq:
@@ -42,7 +43,8 @@ spring:
   data:
     mongodb:
       uri: mongodb://10.0.10.206:27017/myrecipes
-      username: root
+      authentication-database: admin
+      username: mruser
       password: qwer1234!
 
 app:
@@ -61,11 +63,12 @@ spring:
   rabbitmq:
     host: 10.0.10.206
     port: 5672
-    username: root
+    username: mruser
     password: qwer1234!
   data:
     mongodb:
       uri: mongodb://10.0.10.206:27017/myrecipes
+      authentication-database: admin
       username: mruser
       password: qwer1234!
 
